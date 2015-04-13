@@ -1,0 +1,186 @@
+<?php
+// http://www.tonymarston.net/php-mysql/3-tier-architecture.html
+
+class myDatabase{
+   var $db;
+   public function __construct()
+   {
+       $this->db = null;
+       $this->connect();
+       
+   }
+    function connect(){
+        
+        include("xxxxxxxxxxxxxxxxxx");  // sent to system admins
+        $dbName='PTIMSIN1_CSFAIR_2015'; 
+
+        $query      = NULL;
+        $dsn = 'mysql:host=webdb.uvm.edu;dbname=';
+
+        if($debug) print "<p>Username: " . $db_writeUsr;
+        if($debug) print "<p>DSN: " .$dsn . $dbName;
+
+        try { 
+            if (!$this->db) $this->db = new PDO($dsn . $dbName, $db_writeUsr, $db_writePass); 
+            if (!$this->db) {
+                    return 0;
+            } else {
+                    return $this->db;
+            }
+
+            if($debug) echo '<p>A You are connected to the database!</p>';
+        } catch (PDOException $e) {
+            $error_message = $e->getMessage();
+            if($debug) echo "<p>A An error occurred while connecting to the database: $error_message </p>";
+        }
+        return $this->db;
+    }
+
+
+
+
+    //############################################################################
+    /* returns the number of records that matched the query */
+    function numRows($query, $values="") {
+
+            global $debug;
+            
+            $statement = $this->db->prepare($query);
+
+            if(is_array($values)){
+                $statement->execute($values);
+            }else{
+                $statement->execute();
+            }
+
+            $recordSet = $statement->fetchAll();
+
+            if($debug){ print "<p>database.php->numRows<p><pre> "; print_r($recordSet); print "</pre></p>";}
+
+            $statement->closeCursor();
+
+            return count($recordSet);
+    }
+
+    
+    //############################################################################
+    /* performs a select query and returns the array */
+    function select($query, $values="") {
+
+            global $debug;
+
+            if($debug){
+		 print "<p>database.php->select " . $query;
+		 print "<p>DATA: <pre>";
+		 print_r($data);
+		 print "</pre></p>";
+	    }
+
+            $statement = $this->db->prepare($query);
+            
+            if(is_array($values)){
+                $statement->execute($values);
+            }else{
+                $statement->execute();
+            }
+
+            $recordSet = $statement->fetchAll();
+
+            if($debug){ print "<p>database.php->select<p><pre> "; print_r($recordSet); print "</pre></p>";}
+
+            $statement->closeCursor();
+
+            return $recordSet;
+    }
+
+
+    //############################################################################
+    function insert($query, $values=""){
+
+            global $debug;
+
+            if($debug) print "<p>database.php->update " . $query;
+
+            $statement = $this->db->prepare($query);
+
+            if(is_array($values)){
+                $statement->execute($values);
+            }else{
+                $statement->execute();
+            }
+
+            if($debug){ print "<p>database.php->update<p>" . $statement . "</p>";}
+
+            $statement->closeCursor();
+
+            return $statement;
+    } // insertRecord
+
+
+    //############################################################################
+    function lastInsert(){
+
+            global $debug;
+
+            $query="SELECT LAST_INSERT_ID()";
+
+            if($debug) print "<p>database.php->lastInsert " . $query;
+
+            $statement = $this->db->prepare($query);
+
+            $statement->execute();
+
+            $recordSet = $statement->fetchAll();
+
+            if($debug){ print "<p>database.php->last insert<p><pre> "; print_r($recordSet); print "</pre></p>";}
+
+            $statement->closeCursor();
+
+            return $recordSet[0][0];
+    } // insertRecord
+
+    //############################################################################
+    function update($query, $values="") {
+
+            global $debug;
+
+            if($debug) print "<p>database.php->update " . $query;
+
+            $statement = $this->db->prepare($query);
+
+            if(is_array($values)){
+                $statement->execute($values);
+            }else{
+                $statement->execute();
+            }
+
+            if($debug){ print "<p>database.php->update<p>" . $statement . "</p>";}
+
+            $statement->closeCursor();
+
+            return $statement;
+    }
+    
+    //############################################################################
+    function delete($query, $values="") {
+
+            global $debug;
+
+            if($debug) print "<p>database.php->delete " . $query;
+
+            $statement = $this->db->prepare($query);
+
+            if(is_array($values)){
+                $statement->execute($values);
+            }
+
+            if($debug){ print "<p>database.php->delete<p>" . $statement . "</p>";}
+
+            $statement->closeCursor();
+
+            return $statement;
+    }
+
+} // end class
+	
+?>

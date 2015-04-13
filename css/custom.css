@@ -1,0 +1,677 @@
+.smallText{
+    font-size: x-small;
+}
+
+/******************************************  vote page   **********************/
+
+#vote article.project{
+    float: left;
+    width: 60%;
+}
+
+
+/* need to clear any floats that may exist */
+#vote fieldset{
+    clear: both;
+    border: 1px solid #00498e;
+    
+}
+/* just pushes content to left side of the box. */
+#vote fieldset.vote{
+    float: left;
+}
+/* when you look at the labels this pushes then next to the input and right 
+   aligns them. Display block means they are each on their own line.  */
+#vote fieldset.vote label{
+    display: inline-block;
+    text-align: right /* pushes the text to the right where they line up  */
+                      /*  the float left above pushes everything back to the left*/
+}
+
+#vote fieldset.vote input{
+    /* width: 15em;     works with above to be the same size for the boxes */
+}
+         
+#votingStatus{
+   clear: both;
+    
+    padding: 1.3em;
+}
+
+#schedule #votingStatus {
+    float: right;
+}
+#voteForMe{
+    float:right;
+    width: 37%; /*210px;*/
+    background-color: #ffffff;
+    box-shadow: 6px 0 5px 5px rgba(50, 50, 50, 0.43);
+    margin-left: 1em;
+    padding: 1em;
+}
+.qr{ 
+    width: 200px;
+}
+
+#vote .project {
+    margin: 0;
+    padding-top: 1em;
+}
+#voteForMe form fieldset {
+    border: none;
+    margin: 0;
+}
+#voteForMe span#tv{
+    float: right;
+    text-align: center;
+    padding-left: 1em;
+}
+#voteForMe form input {
+    margin-bottom: 0;
+    font-size: inherit;
+}
+#voteForMe form input#btnVote{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+   /* width: 210px;*/
+    
+	-moz-box-shadow:inset 1px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 1px 1px 0px 0px #ffffff;
+	box-shadow:inset 1px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dbdbdb), 
+color-stop(1, #7a7a7a) );
+	background:-moz-linear-gradient( center top, #dbdbdb 5%, #7a7a7a 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dbdbdb', 
+endColorstr='#7a7a7a');
+	background-color:#dbdbdb;
+	-webkit-border-top-left-radius:20px;
+	-moz-border-radius-topleft:20px;
+	border-top-left-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-radius-topright:20px;
+	border-top-right-radius:20px;
+	-webkit-border-bottom-right-radius:20px;
+	-moz-border-radius-bottomright:20px;
+	border-bottom-right-radius:20px;
+	-webkit-border-bottom-left-radius:20px;
+	-moz-border-radius-bottomleft:20px;
+	border-bottom-left-radius:20px;
+	text-indent:0;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#fffcff;
+	font-family:Arial;
+	font-size:25px;
+	font-weight:bold;
+	font-style:italic;
+	line-height:35px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:0px 0px 0px #ffffff;
+}
+#voteForMe form input#btnVote:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #7a7a7a), 
+color-stop(1, #dbdbdb) );
+	background:-moz-linear-gradient( center top, #7a7a7a 5%, #dbdbdb 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7a7a7a', 
+endColorstr='#dbdbdb');
+	background-color:#7a7a7a;
+}
+
+/*
+#voteForMe form input#btnVote{
+color: #fff;
+ font-size: 1.5em;
+ width: 90%;
+ height: 3em;
+ border: none;
+ margin: auto;
+ padding: 0;
+padding:5px; border:2px solid #ccc; 
+-webkit-border-radius: 15px;
+border-radius: 15px;
+background-color: green;
+}
+*/
+
+
+#voteForMe form input#txtNetID{
+    width: 6em;
+}
+
+.redText{ /* removed #vote */
+    color: #880000;
+}
+
+#vote .greenText{
+    color: #486F29;
+}
+
+
+.box{
+    padding-right: 15em;
+    border: thin solid black;
+}
+
+.boxLabel{
+    padding: 0.5em 0.5em 0.5em 0;
+    text-align: right;
+    width: 20em;
+}
+
+#main aside#votingStatus ol li{
+    list-style-type: decimal;
+    margin-left: 2em;
+}
+#voting #main p{
+    margin: 2em 0 2em 0;
+}
+#voting #main ol li {
+    margin-left: 5em;
+    padding: 0.2em;
+}
+
+/******************************************  voting results page   *****************/
+#votingResults #main{
+    width: 100%;
+    
+}
+
+#votingResults #main table{
+    margin: auto;
+    width: 95%;
+    
+}
+#votingResults #main table{
+    margin-left: 3em;
+    border-collapse: collapse; 
+    border: solid thick #ababab;
+    box-shadow: 6px 0 5px rgba(50, 50, 50, 0.43);
+}
+
+#votingResults #main td, #schedule #main th {
+    border: thin solid gray;
+    padding: 1em;
+}
+
+#votingResults #main tr:hover{
+    background-color: lightgray;
+}
+
+#votingResults #main #joe{
+    border: thin solid gray;
+    padding: 1em;
+    width: 400px;
+   
+}
+
+
+#votingResults #main ol li{ 
+    list-style-type: none;
+    padding-bottom: 1em;
+}
+
+
+/******************************************  schedule list page   *****************/
+#schedule #main{
+    width: 100%;
+    
+}
+
+#schedule #main table{
+    margin: auto;
+    width: 95%;
+    
+}
+#schedule #main table{
+    margin-left: 3em;
+    border-collapse: collapse; 
+    border: solid thick #ababab;
+    box-shadow: 6px 0 5px rgba(50, 50, 50, 0.43);
+}
+
+#schedule #main td, #schedule #main th {
+    border: thin solid gray;
+    padding: 1em;
+}
+
+#schedule #main tr:hover{
+    background-color: lightgray;
+}
+
+#schedule #main #joe{
+    border: thin solid gray;
+    padding: 1em;
+    width: 400px;
+   
+}
+
+
+#schedule #main ol li{ 
+    list-style-type: none;
+    padding-bottom: 1em;
+}
+
+.projectPresent{
+    
+}
+
+.studentPresentor{
+    
+}
+
+/*////////////////////////*/
+
+/* BODY */
+
+/*///////////////////////**/
+ #page-wrap {
+    width: 96%;
+    margin: 0 auto;
+    border: 1px solid #e5e5e5;
+    border-width: 0 1px 1px 1px;
+    box-shadow: 0px 0px 20px #e5e5e5;
+    padding-bottom: 50px;
+}
+#main {
+    padding: 20px;
+    margin: 0px auto;
+    max-width: 1200px;
+    width: 75%;
+}
+.img-about {
+    margin: 0px 10px 20px 10px;
+}
+.page-title {
+    margin: 30px 0px 20px 30px;
+}
+.row {
+    margin: 0 30px;
+}
+.intro-row {
+    max-width: 910px;
+}
+.intro-row p {
+    width: 530px;
+}
+.gray {
+    color: #999;
+}
+.red {
+    color: red;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.font-size-small {
+    font-size: 14px;
+}
+.font-size-medium-large {
+    font-size: 24px;
+}
+/*////////////////////////*/
+
+/* HEADER */
+
+/*///////////////////////**/
+ header {
+    text-align: center;
+    background-image: url('../images/agsquare.png');
+}
+#uvm-text {
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    letter-spacing: 3px;
+    margin:0px auto;
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 30px 0px 10px 0px;
+}
+.fancy-text {
+    font-family:"Brush Script MT", cursive;
+    font-family:'Yesteryear', cursive;
+    font-size: 100px;
+}
+.fancy-text a {
+    color: #444;
+    text-decoration: none;
+    text-shadow: 2px 4px 4px #ddd;
+}
+/*////////////////////////*/
+
+/* NAVBAR */
+
+/*///////////////////////**/
+ .navbar-nav {
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    float: none;
+}
+.navbar {
+    border-radius: 0px;
+    border-width: 1px 0px;
+    margin-bottom: 0px;
+}
+/*////////////////////////*/
+
+/* SLIDESHOW */
+
+/*///////////////////////**/
+ #carousel-example-generic {
+    margin-top: -20px;
+    border-top: 10px solid #F4F4F4;
+    margin-bottom: 20px;
+}
+/*////////////////////////*/
+
+/* HOME PAGE */
+
+/*///////////////////////**/
+ .home {
+    height: 180px;
+}
+.stats {
+    background-color: #F9F9F9;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    padding: 6.5%;
+}
+
+.lead sup{
+    font-size: 11px;
+}
+/*////////////////////////*/
+
+/* PRIZES */
+
+/*///////////////////////**/
+ .first h2 {
+    font-size: 36px;
+}
+.first h3 {
+    font-size: 88px;
+    color: #999;
+}
+.prize h2 {
+    font-size: 26px;
+}
+.prize h3 {
+    font-size: 20px;
+}
+.prize h4 {
+    font-size: 40px;
+    color: #999;
+}
+#wrapper h3 {
+    font-size: 40px;
+    color: #999;
+}
+.disclaimer {
+    padding-top: 40px;
+    color: #999;
+    font-size: 12px;
+}
+/*
+.winner {
+    display: none;
+}
+*/
+/*////////////////////////*/
+
+/* PROJECTS PAGE */
+
+/*///////////////////////**/
+ .sidebar {
+    font-size: 11px;
+}
+.sidebar ul, ol {
+    padding-left: 20px;
+}
+
+.projects-img{
+    display: block;
+    margin: 20px auto;
+}
+
+/*////////////////////////*/
+
+/* PROJECT registration PAGE */
+
+/*///////////////////////**/
+div.group{
+    display: block;
+}
+
+div.group2, div.group3, div.group4, div.group5, div.group6, div.group7, 
+div.group8, div.group9, div.group10{
+    display: none;
+}
+/*////////////////////////*/
+
+/* SPONSORS PAGE */
+
+/*///////////////////////**/
+.sponsors{
+    margin-top: 30px;
+}
+.sponsors .img-thumbnail {
+    border: none;
+    margin: 20px 10px;
+    height: auto;
+}
+h2.sponsor-level {
+    margin-left: 30px;
+}
+.sponsrs h3{
+    color: white;
+    background-color: #999;
+    padding: 10px;
+    margin: 10px 700px 10px 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+.Catamount img{
+    max-height: 200px;
+}
+.Gold img{
+    max-height: 150px;
+    max-width: 350px;
+}
+
+.Silver img{
+    max-height: 100px;
+    max-width: 200px;
+}
+.Bronze img{
+    max-height: 50px;
+}
+/*////////////////////////*/
+
+/* SPONSORSHIP PAGE */
+
+/*///////////////////////**/
+ legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: inherit;
+    color: #333;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+    padding-top: 30px;
+}
+
+/* checks off the process as a person has them complete */
+.complete:before{
+   /* background-image:url(../images/Valid.png);
+    background-position: left;
+    background-repeat: no-repeat;*/
+   content:url(../images/Valid.png);
+    margin-left: -36px;
+    margin-right: 19px;
+}
+
+/*////////////////////////*/
+
+/* SPONSORSHIP FORM PAGE */
+
+/*///////////////////////**/
+
+/* makes all mistakes blatantly easy to see if they miss the subtle clues above */
+.mistake {
+    color: #fff !important;
+    background-color:#800 !important;
+    border: thin solid #000 !important;
+}
+
+#errors ol li{
+    color: #CC0000 !important;
+    font-family: sans-serif !important;
+}
+
+/*////////////////////////*/
+
+/* JUDGES */
+
+/*///////////////////////**/
+ .judging-criteria h3 {
+    color: #999;
+}
+.judge-pic-container{
+    position: relative;
+    width: 115px;
+    height: 115px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    display: inline-block;
+    margin: 50px auto;
+}
+ol.judges div.col-md-4 {
+    text-align: center;
+}
+ol.judges h4 {
+    margin: 15px 0;
+    color: #999;
+}
+ol.judges li {
+    min-height: 150px;
+    margin-bottom: 30px;
+}
+ol.judges p {
+    width: 500px;
+}
+
+/* hide additional judges so we don't intimidate people into thinking they need
+   all those judges */
+#judge1, #judge2, #judge3, #judge4{
+    display:none;
+}
+/*////////////////////////*/
+
+/* TABLES */
+
+/*///////////////////////**/
+ table thead {
+    background-color: #F4F4F4;
+    font-size: 18px;
+}
+table td.img {
+    text-align: center;
+    width: 40%;
+    vertical-align: middle;
+    background-color: #fff;
+}
+table td.img img {
+    padding: 0px;
+}
+.sponsors-table td {
+    border: none;
+    text-align: center;
+}
+/*////////////////////////*/
+
+/* FOOTER */
+
+/*///////////////////////**/
+ footer {
+     clear: both;
+    color: #777;
+    padding: 4em;
+    margin-top: 50px;
+    font-size: 12px;
+    text-align: center;
+}
+/*////////////////////////*/
+
+/* MEDIA QUERIES */
+
+/*///////////////////////**/
+ @media (max-width: 991px) {
+    .dis {
+        display: none;
+    }
+    .row {
+       margin: 0px;
+   }
+    #page-wrap {
+        width: 100%;
+        margin: 0 auto;
+        border: 1px solid #e5e5e5;
+        border-width: 0 1px 1px 1px;
+        box-shadow: 0px 0px 20px #e5e5e5;
+        padding-bottom: 50px;
+    }
+    .sidebar {
+        font-size: 14px;
+    }
+    .sidebar h2 {
+        font-size: 24px;
+    }
+    footer {
+        color: #777;
+        padding: 4em;
+        border-top: 1px solid #e5e5e5;
+        margin-top: 50px;
+        font-size: 12px;
+        text-align: center;
+    }
+}
+@media (max-width: 770px) {
+    #main {
+        padding: 20px;
+        margin: 0px auto;
+        width: 95%;
+    }
+    .sponsors-table td {
+        display: block;
+    }
+    .intro-row p {
+        width: inherit;
+    }
+    ol.judges p {
+        width: inherit;
+    }
+}
+
+@media (max-width: 542px) {
+   #voteForMe{
+       clear:both;
+       width: 100%;
+   }
+}
